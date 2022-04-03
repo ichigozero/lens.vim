@@ -56,6 +56,10 @@ if ! exists('g:lens#width_resize_min')
   \)
 endif
 
+if ! exists("g:lens#target_width_padding")
+  let g:lens#target_width_padding = 5
+endif
+
 if ! exists('g:lens#disabled_filetypes')
   " Disable for the following filetypes
   let g:lens#disabled_filetypes = []
@@ -119,7 +123,10 @@ endfunction
 ""
 " Gets the target width
 function! lens#get_target_width() abort
-  return lens#get_cols() + (wincol() - virtcol('.'))
+  return lens#get_cols()
+    \ + (wincol()
+    \ - virtcol('.'))
+    \ + g:lens#target_width_padding
 endfunction
 
 ""
