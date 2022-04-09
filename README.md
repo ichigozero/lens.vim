@@ -1,4 +1,3 @@
-
 ```
 ██╗     ███████╗███╗   ██╗███████╗  ██╗   ██╗██╗███╗   ███╗
 ██║     ██╔════╝████╗  ██║██╔════╝  ██║   ██║██║████╗ ████║
@@ -20,22 +19,9 @@ windows neither become too large (in cases of large content) or too small (in ca
 
 ![Lens](https://user-images.githubusercontent.com/51294/75085928-222ab880-5593-11ea-881c-32f32db27fa5.gif)
 
-## Animation
-
-`Lens.vim` by default integrates with the [camspiers/animate.vim](https://github.com/camspiers/animate.vim) plugin for window animation.
-
 ## Installation
 
 To install `Lens.vim`, use your plugin manager of choice, for example
-
-### With Animation
-
-```
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
-```
-
-### Without Animation
 
 ```
 Plug 'camspiers/lens.vim'
@@ -63,14 +49,6 @@ The plugin can be disabled for specific filetypes:
 
 ```
 let g:lens#disabled_filetypes = ['nerdtree', 'fzf']
-```
-
-### Animate
-
-Animation is enabled by default, but can be disabled with:
-
-```
-let g:lens#animate = 0
 ```
 
 ### Resize Max Height
@@ -149,4 +127,3 @@ Gets the cols of the current window
 ```
 function! lens#get_cols() abort
 ```
-

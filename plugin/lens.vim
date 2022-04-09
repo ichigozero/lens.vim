@@ -22,11 +22,6 @@ if ! exists('g:lens#disabled')
   let g:lens#disabled = 0
 endif
 
-if ! exists('g:lens#animate')
-  " Enable animation when available
-  let g:lens#animate = 1
-endif
-
 if ! exists("g:lens#resize_floating")
   " Enable resizing of neovim's floating windows
   let g:lens#resize_floating = 0
@@ -146,14 +141,8 @@ function! lens#run() abort
     \ g:lens#height_resize_max
   \)
 
-  if g:lens#animate && exists('g:animate#loaded') && g:animate#loaded
-    if ! animate#window_is_animating(winnr())
-      call animate#window_absolute(width, height)
-    endif
-  else
-    execute 'vertical resize ' . width
-    execute 'resize ' . height
-  endif
+  execute 'vertical resize ' . width
+  execute 'resize ' . height
 endfunction
 
 function! lens#win_enter() abort

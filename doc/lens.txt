@@ -14,14 +14,12 @@ Repo:     https://github.com/camspiers/lens.vim
 TABLE OF CONTENTS                                              *lens-contents*
 
 INTRODUCTION...............................................|lens-introduction|
-    ANIMATION....................................|lens-introduction-animation|
 USAGE.............................................................|lens-usage|
 CONFIGURATION.............................................|lens-configuration|
     g:lens#disabled..........................................|g:lens#disabled|
     g:lens#disabled_filetypes......................|g:lens#disabled_filetypes|
     g:lens#disabled_buftypes........................|g:lens#disabled_buftypes|
     g:lens#disabled_filenames......................|g:lens#disabled_filenames|
-    g:lens#animate............................................|g:lens#animate|
     g:lens#height_resize_max........................|g:lens#height_resize_max|
     g:lens#height_resize_min........................|g:lens#height_resize_min|
     g:lens#width_resize_max..........................|g:lens#width_resize_max|
@@ -36,11 +34,6 @@ Lens.vim automatically resizes windows when their content exceeds their window
 dimensions, but does so respecting some minimum and maximum resize bounds
 ensuring automatically resized windows neither become too large (in cases of
 large content) or too small (in cases of small content).
-
-ANIMATION                                        *lens-introduction-animation*
-
-lens.vim by default integrates with the camspiers/animate.vim plugin for
-window animation if the plugin is installed and |g:lens#animate| is set to 1.
 
 ==============================================================================
 USAGE                                                             *lens-usage*
@@ -75,13 +68,6 @@ g:lens#disabled_filenames
              expressions.
 
              Default value is [].
-                                                              *g:lens#animate*
-                                                              *g:lens#animate*
-g:lens#animate
-             If value is 1 and animate.vim is installed, the window resize
-             will be animated.
-
-             Default value is 1.
                                                     *g:lens#height_resize_max*
 g:lens#height_resize_max
              When resizing don't go beyond the following height.
