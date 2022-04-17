@@ -85,9 +85,6 @@ endfunction
 ""
 " Returns a width or height respecting the passed configuration
 function! lens#get_size(current, target, resize_min, resize_max) abort
-  if a:current > a:target
-    return a:current
-  endif
   return max([
     \ a:current,
     \ min([
